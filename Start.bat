@@ -1,4 +1,5 @@
 @echo off
+set http_proxy=http://127.0.0.1:7890 & set https_proxy=http://127.0.0.1:7890
 cd /d "%~dp0"
 title MENU
 
@@ -19,14 +20,17 @@ exit
 
 :cmd1
 git push -u origin main
+pause
 goto menu
 
 
 :cmd2
 hexo clean
+pause
 goto menu
 
 
 :cmd3
 hexo server
+pause
 goto menu
